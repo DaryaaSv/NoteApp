@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyNotes</string>
+    <string name="notes">Notes</string>
+    <string name="addnote">Add a new note</string>
+    <string name="title">Note title</string>
+    <string name="description">Note description</string>
+    <string-array name="importance">
+        <item>so important</item>
+        <item>quite important</item>
+        <item>unimportant</item>
+    </string-array>
+    <string name="importance">Importance</string>
+    <string name="addpic">Choose a photo</string>
+    <string name="soimp">so important</string>
+    <string name="qimp">quite important</string>
+    <string name="time">Created time</string>
+    <string name="imp">unimportant</string>
+    <string name="savenote">Save a note</string>
+    <string name="sortbytitle">Sort notes by title</string>
+    <string name="sortbyimportance">Sort notes by importance</string>
+    <string name="edit">Edit a note</string>
+    <string name="delete">Delete a note</string>
+    <string name="back">Get back</string>
+    <string name="search">Search a note</string>
+</resources>

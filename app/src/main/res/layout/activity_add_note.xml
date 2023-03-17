@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85A4BA"
+    android:orientation="vertical"
+    tools:context=".AddNoteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addnote"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#182434">
+    </TextView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/titleinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#DCD9D8"
+            android:hint="@string/title"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="#182434"
+            android:textSize="25dp"></EditText>
+
+        <EditText
+            android:background="#DCD9D8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptioninput"
+            android:hint="@string/description"
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:textColor="#182434"
+            android:lines="5"
+            android:padding="10dp">
+        </EditText>
+
+        <Spinner
+            android:id="@+id/importance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:minHeight="48dp">
+        </Spinner>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addpic"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:backgroundTint="#495784"
+                android:text="@string/addpic">
+            </com.google.android.material.button.MaterialButton>
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/addpic"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#495784"
+            android:text="@string/savenote">
+        </com.google.android.material.button.MaterialButton>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#495784"
+            android:text="@string/back">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+
+
+</LinearLayout>

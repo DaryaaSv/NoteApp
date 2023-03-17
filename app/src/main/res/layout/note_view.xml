@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/image_placeholder"
+            android:id="@+id/imageoutput"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/titleoutput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/titleoutput"
+            android:layout_width="327dp"
+            android:textStyle="bold"
+            android:layout_height="25dp"
+            android:text="@string/title"
+            android:layout_below="@id/lay"
+            android:textColor="#182434"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/descriptionoutput"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:textColor="#0E1D35"
+            android:textSize="20dp"
+            android:text="@string/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/importanceoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/importance"
+        android:layout_below="@id/lay"
+        android:textColor="#0E1D35"
+        android:textSize="20dp"></TextView>
+
+
+
+    <TextView
+        android:id="@+id/timeoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/importanceoutput"
+        android:textColor="#0E1D35"
+        android:text="@string/time"
+        android:textSize="20dp"
+        android:gravity="end"></TextView>
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">МійНотатник</string>
+    <string name="notes">Нотатки</string>
+    <string name="addnote">Додати нову нотатку</string>
+    <string name="title">Назва нотатки</string>
+    <string name="description">Опис нотатки</string>
+    <string-array name="importance">
+        <item>дуже важливо</item>
+        <item>доволі важливо</item>
+        <item>неважливо</item>
+    </string-array>
+    <string name="addpic">Оберіть зображення</string>
+    <string name="importance">Важливість</string>
+    <string name="savenote">Зберегти нотатку</string>
+    <string name="soimp">дуже важливо</string>
+    <string name="qimp">доволі важливо</string>
+    <string name="time">Час створення</string>
+    <string name="imp">неважливо</string>
+    <string name="sortbytitle">Фільтрація нотаток за назвою</string>
+    <string name="sortbyimportance">Фільтрація нотаток за важливістю</string>
+    <string name="edit">Редагувати нотатку</string>
+    <string name="delete">Видалити нотатку</string>
+    <string name="back">Повернутися до головного меню</string>
+    <string name="search">Знайти нотатку</string>
+</resources>
