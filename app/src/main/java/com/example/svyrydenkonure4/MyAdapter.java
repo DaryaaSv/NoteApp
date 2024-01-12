@@ -23,10 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Note> {
-
     private Context mContext;
-
-    ArrayList<Note> notes;
+    private ArrayList<Note> notes;
 
     public MyAdapter(Context context, int textViewResourceId,
                      ArrayList<Note> notes) {

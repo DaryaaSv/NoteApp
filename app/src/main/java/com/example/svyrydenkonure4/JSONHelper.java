@@ -3,6 +3,7 @@ package com.example.svyrydenkonure4;
 import android.content.Context;
 
 import com.google.gson.Gson;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,7 +15,6 @@ public class JSONHelper {
     private static final String FILE_NAME = "data.json";
 
     static boolean exportToJSON(Context context, ArrayList<Note> dataList) {
-
         Gson gson = new Gson();
         DataItems dataItems = new DataItems();
         dataItems.setUsers(dataList);
@@ -32,7 +32,6 @@ public class JSONHelper {
     }
 
     static ArrayList<Note> importFromJSON(Context context) {
-
         try(FileInputStream fileInputStream = context.openFileInput(FILE_NAME);
             InputStreamReader streamReader = new InputStreamReader(fileInputStream)){
 
@@ -43,13 +42,11 @@ public class JSONHelper {
         catch (IOException ex){
             ex.printStackTrace();
         }
-
         return null;
     }
 
     private static class DataItems {
         private ArrayList<Note> notes;
-
         ArrayList<Note> getUsers() {
             return notes;
         }

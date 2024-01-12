@@ -25,15 +25,15 @@ public class AddNoteActivity extends AppCompatActivity {
 
     private ArrayAdapter<Note> adapter;
     private static final int PICK_IMAGE = 100;
-    Uri imageUri;
-    ImageView image;
-    EditText titleInput;
-    EditText descriptionInput;
-    Spinner sp1;
-    MaterialButton addPic;
-    MaterialButton saveNote;
-    MaterialButton getBack;
-    ArrayList<Note> notes;
+    private Uri imageUri;
+    private ImageView image;
+    private EditText titleInput;
+    private EditText descriptionInput;
+    private Spinner sp1;
+    private MaterialButton addPic;
+    private MaterialButton saveNote;
+    private MaterialButton getBack;
+    private ArrayList<Note> notes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
         Bundle arguments = getIntent().getExtras();
 
-        if(arguments!=null){
+        if(arguments != null) {
             String title = arguments.get("title").toString();
             String description = arguments.getString("description");
             String importance = arguments.getString("importance");
@@ -67,13 +67,14 @@ public class AddNoteActivity extends AppCompatActivity {
             String uri = arguments.getString("uri");
             imageUri = Uri.parse(arguments.getString("uri"));
             int id = arguments.getInt("id");
+
             Note note = new Note(title, description, time, importance, uri);
             image.setImageURI(Uri.parse(uri));
             titleInput.setText(title);
             descriptionInput.setText(description);
             notes.remove(id);
-            JSONHelper.exportToJSON(this, notes);
 
+            JSONHelper.exportToJSON(this, notes);
         }
 
         saveNote.setOnClickListener(new View.OnClickListener() {
@@ -119,11 +120,11 @@ public class AddNoteActivity extends AppCompatActivity {
         notes.add(note);
 
         boolean result = JSONHelper.exportToJSON(this, notes);
-        if(result){
-            Toast.makeText(this, "Дані збережено", Toast.LENGTH_LONG).show();
+        if(result) {
+            Toast.makeText(this, "Data was successfully saved", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(this, "Не вдалося зберегти дані", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Could not save data", Toast.LENGTH_LONG).show();
         }
     }
 

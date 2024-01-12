@@ -1,7 +1,6 @@
 package com.example.svyrydenkonure4;
 
 public class Note {
-
     private String title;
     private String description;
     private long createdTime;

@@ -29,11 +29,11 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Note> notes = new ArrayList<Note>();
-    MaterialButton addNoteBtn;
-    ListView listView;
-    MyAdapter myAdapter;
-    SearchView searchView;
+    private ArrayList<Note> notes = new ArrayList<Note>();
+    private MaterialButton addNoteBtn;
+    private ListView listView;
+    private MyAdapter myAdapter;
+    private SearchView searchView;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -80,9 +80,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-
         getMenuInflater().inflate(R.menu.context_menu, menu);
-
     }
 
     private void filterList(String newText) {
